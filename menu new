@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特富野餐廳 · 菜單</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf7f2;
+    --brown-dark: #3d2b1a;
+    --brown-mid: #6b4c2f;
+    --gold: #b8963e;
+    --gold-light: #d4af6a;
+    --text-main: #2c1f0e;
+    --text-sub: #7a6550;
+    --border: rgba(184, 150, 62, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--cream); color: var(--text-main); font-family: 'Noto Serif TC', serif; min-height: 100vh; padding: 0 0 60px; }
+  .header { text-align: center; padding: 52px 24px 40px; }
+  .header::after { content: ''; display: block; width: 60px; height: 1px; background: var(--gold); margin: 28px auto 0; }
+  .subtitle-top { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 18px; }
+  .title-main { font-size: 36px; font-weight: 500; letter-spacing: 0.25em; color: var(--brown-dark); }
+  .subtitle-zh { font-size: 13px; font-weight: 300; letter-spacing: 0.3em; color: var(--gold); margin-top: 10px; }
+  .set-banner { max-width: 480px; margin: 20px auto 0; padding: 0 24px; text-align: center; }
+  .set-banner-inner { display: inline-block; padding: 8px 22px; border: 1px solid var(--gold); border-radius: 2px; font-size: 12px; letter-spacing: 0.2em; color: var(--brown-mid); background: rgba(184, 150, 62, 0.06); }
+  .section { padding: 0 24px; max-width: 480px; margin: 0 auto; }
+  .section-header { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 32px 0 16px; }
+  .section-header .line { flex: 1; height: 1px; background: var(--border); }
+  .section-title { font-size: 12px; letter-spacing: 0.35em; color: var(--gold); font-weight: 400; white-space: nowrap; }
+  .dish { display: flex; align-items: baseline; padding: 13px 0; border-bottom: 1px dashed var(--border); gap: 12px; }
+  .dish:last-child { border-bottom: none; }
+  .dish-name { font-size: 17px; font-weight: 400; color: var(--text-main); letter-spacing: 0.05em; flex: 1; }
+  .dish-note { font-size: 11px; color: var(--gold-light); letter-spacing: 0.05em; white-space: nowrap; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+  .set-card { max-width: 480px; margin: 36px auto 0; padding: 0 24px; }
+  .set-inner { border: 1px solid var(--gold); border-radius: 2px; padding: 28px 28px 24px; text-align: center; }
+  .set-label { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px; letter-spacing: 0.2em; color: var(--gold-light); margin-bottom: 10px; }
+  .set-name { font-size: 20px; font-weight: 500; letter-spacing: 0.3em; color: var(--brown-dark); margin-bottom: 16px; }
+  .set-price-wrap { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin-bottom: 6px; }
+  .set-per { font-size: 11px; color: var(--text-sub); }
+  .set-price { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--brown-dark); line-height: 1; }
+  .set-currency { font-size: 20px; color: var(--gold); font-family: 'Cormorant Garamond', serif; }
+  .set-desc { font-size: 11px; color: var(--text-sub); margin-top: 4px; }
+  .set-only { font-size: 12px; color: var(--gold); margin-top: 10px; letter-spacing: 0.1em; }
+  .notes { max-width: 480px; margin: 24px auto 0; padding: 0 24px; }
+  .note-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 12px; color: var(--text-sub); line-height: 1.7; }
+  .note-dot { color: var(--gold); flex-shrink: 0; }
+  .footer { text-align: center; padding: 44px 24px 0; }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.35em; color: var(--brown-mid); }
+  .footer-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px; letter-spacing: 0.15em; color: var(--gold-light); margin-top: 6px; }
+  .footer-line { width: 40px; height: 1px; background: var(--gold); margin: 20px auto 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="subtitle-top">— Tfuya Restaurant · Alishan —</div>
+  <div class="title-main">特 富 野 餐 廳</div>
+  <div class="subtitle-zh">鄒族風味料理</div>
+</div>
+<div class="set-banner">
+  <div class="set-banner-inner">本店為套餐制 · 每人 $500 · 無單點</div>
+</div>
+<div class="section">
+  <div class="section-header"><div class="line"></div><span>🌿</span><span class="section-title">前 菜 小 食</span><span>🌿</span><div class="line"></div></div>
+  <div class="dish"><span class="dish-name">炸山野芹菜</span></div>
+  <div class="dish"><span class="dish-name">南瓜佐沙沙</span></div>
+  <div class="dish"><span class="dish-name">豪醬涼秋葵</span></div>
+  <div class="dish"><span class="dish-name">山葵豆腐</span></div>
+</div>
+<div class="section">
+  <div class="section-header"><div class="line"></div><span>🍖</span><span class="section-title">主 菜</span><span>🍖</span><div class="line"></div></div>
+  <div class="dish"><span class="dish-name">獵人包</span></div>
+  <div class="dish"><span class="dish-name">烤食</span><span class="dish-note">豬肉 或 雞肉，擇一</span></div>
+  <div class="dish"><span class="dish-name">舒肥鯝魚</span></div>
+  <div class="dish"><span class="dish-name">炸炒溪蝦</span></div>
+</div>
+<div class="section">
+  <div class="section-header"><div class="line"></div><span>🥬</span><span class="section-title">野 菜 料 理</span><span>🥬</span><div class="line"></div></div>
+  <div class="dish"><span class="dish-name">野菜煎蛋</span></div>
+  <div class="dish"><span class="dish-name">炒時蔬</span><span class="dish-note">高麗菜 或 荷蘭豆</span></div>
+</div>
+<div class="section">
+  <div class="section-header"><div class="line"></div><span>🍲</span><span class="section-title">湯 品</span><span>🍲</span><div class="line"></div></div>
+  <div class="dish"><span class="dish-name">樹豆排骨湯</span></div>
+</div>
+<div class="section">
+  <div class="section-header"><div class="line"></div><span>☕</span><span class="section-title">甜 點 ／ 飲 品</span><span>☕</span><div class="line"></div></div>
+  <div class="dish"><span class="dish-name">愛玉</span></div>
+  <div class="dish"><span class="dish-name">阿里山咖啡</span></div>
+</div>
+<div class="set-card">
+  <div class="set-inner">
+    <div class="set-label">✦ Set Menu per Person ✦</div>
+    <div class="set-name">鄒 族 風 味 全 餐</div>
+    <div class="set-price-wrap"><span class="set-per">每人</span><span class="set-currency">$</span><span class="set-price">500</span></div>
+    <div class="set-desc">含以上全部菜色</div>
+    <div class="set-only">※ 套餐制 · 無單點服務</div>
+  </div>
+</div>
+<div class="notes">
+  <div class="note-item"><span class="note-dot">✦</span><span>本店為套餐制，無單點服務，每人 $500 含菜單上全部菜色</span></div>
+  <div class="note-item"><span class="note-dot">✦</span><span>菜色依當季食材調整，若當天品項有異動會提早告知</span></div>
+  <div class="note-item"><span class="note-dot">✦</span><span>全預約制，食材現備，歡迎來電或 Line 預約</span></div>
+</div>
+<div class="footer">
+  <div class="footer-line"></div>
+  <div class="footer-name" style="margin-top:20px">TFUYA RESTAURANT</div>
+  <div class="footer-sub">Alishan · Tsou Tribal Cuisine</div>
+</div>
+</body>
+</html>
