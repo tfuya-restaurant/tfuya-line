@@ -1,216 +1,553 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta name="google-site-verification" content="SmUeRkZ8dkyBOPVhHS4m3HOakw-C3Yx-2TjoSpq66Rk" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>特富野餐廳｜阿里山鄒族料理・預約制原住民餐廳・嘉義特富野部落</title>
-  <meta name="description" content="特富野餐廳位於阿里山特富野部落，提供鄒族風味餐、在地家常料理、noyoca巨木群行程與部落體驗，採預約制安排。" />
+  <meta name="description" content="特富野餐廳位於阿里山特富野部落，提供鄒族風味餐、在地家常料理與預約制用餐體驗，也可搭配 noyoca 巨木群與部落體驗行程安排。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6f4b2f">
+  <link rel="canonical" href="https://tfuya-restaurant.github.io/tfuya-line/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="特富野餐廳｜阿里山鄒族料理・預約制原住民餐廳・嘉義特富野部落">
+  <meta property="og:description" content="走進特富野，吃一頓有土地味道的飯。提供預約制鄒族風味餐、noyoca 巨木群與部落體驗安排。">
+  <meta property="og:url" content="https://tfuya-restaurant.github.io/tfuya-line/">
+  <meta property="og:site_name" content="特富野餐廳">
+  <meta name="twitter:card" content="summary_large_image">
+
   <style>
-    :root {
-      --bg: #f5efe5;
-      --bg-soft: #fbf7f1;
-      --card: #fffdf9;
-      --text: #2f251d;
-      --text-soft: #65584d;
-      --accent: #7b5a3a;
-      --accent-deep: #4a3728;
-      --hero: linear-gradient(135deg, rgba(62,45,31,.82), rgba(97,73,50,.62));
-      --shadow: 0 10px 30px rgba(63, 46, 31, 0.12);
-      --radius: 18px;
-      --max: 1120px;
+    :root{
+      --bg:#f6f1e8;
+      --bg2:#efe5d4;
+      --card:#fffdf8;
+      --text:#2f241b;
+      --muted:#6c6158;
+      --line:#dccbb4;
+      --accent:#6f4b2f;
+      --accent2:#8e6842;
+      --soft:rgba(111,75,47,.08);
+      --shadow:0 14px 38px rgba(47,36,27,.08);
+      --radius:22px;
+      --max:1160px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-    .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(12px); background: rgba(245, 239, 229, 0.88); border-bottom: 1px solid rgba(123, 90, 58, 0.12); }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
-    .brand { font-weight: 800; letter-spacing: 0.06em; font-size: 1.02rem; }
-    .nav-links { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; color: var(--text-soft); font-size: 0.95rem; }
-    .nav-links a:hover { color: var(--accent-deep); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 20px; border-radius: 999px; border: 1px solid transparent; font-weight: 700; transition: .2s ease; cursor: pointer; }
-    .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
-    .btn-primary:hover { background: var(--accent-deep); }
-    .btn-outline { border-color: var(--accent); color: var(--accent-deep); background: rgba(255,255,255,.45); }
-    .btn-outline:hover { background: rgba(123,90,58,.08); }
-    .hero { background: var(--hero), radial-gradient(circle at top right, rgba(255,255,255,.08), transparent 30%), linear-gradient(120deg, #4f3a29, #8a6a48); color: white; }
-    .hero-inner { min-height: 78vh; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center; padding: 64px 0 56px; }
-    .eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16); font-size: .9rem; margin-bottom: 16px; }
-    h1 { font-size: clamp(2.3rem, 4.8vw, 4.4rem); line-height: 1.18; margin: 0 0 18px; letter-spacing: 0.02em; }
-    .hero p { font-size: clamp(1rem, 1.6vw, 1.15rem); color: rgba(255,255,255,.92); margin: 0 0 26px; max-width: 720px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
-    .hero-card { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: 24px; padding: 22px; box-shadow: 0 20px 40px rgba(0,0,0,.18); }
-    .hero-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
-    .hero-card p { margin: 0; font-size: .97rem; }
-    .section { padding: 76px 0; }
-    .section-soft { background: var(--bg-soft); }
-    .section-title { max-width: 760px; margin-bottom: 28px; }
-    .section-title .tag { color: var(--accent); font-weight: 800; font-size: .94rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .section-title h2 { margin: 10px 0 10px; font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.28; }
-    .section-title p { margin: 0; color: var(--text-soft); }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .card { background: var(--card); border: 1px solid rgba(123, 90, 58, 0.12); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
-    .card h3 { margin-top: 0; margin-bottom: 8px; font-size: 1.12rem; }
-    .card p, .card li { color: var(--text-soft); margin-top: 0; }
-    .feature-number { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 50%; background: rgba(123, 90, 58, 0.1); color: var(--accent-deep); font-weight: 800; margin-bottom: 12px; }
-    ul.clean { list-style: none; padding: 0; margin: 0; }
-    ul.clean li { position: relative; padding-left: 18px; margin-bottom: 10px; }
-    ul.clean li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-    .quote { padding: 26px; border-left: 4px solid var(--accent); background: rgba(123,90,58,.06); border-radius: 0 16px 16px 0; color: var(--accent-deep); font-weight: 700; }
-    .contact-box { display: grid; gap: 16px; }
-    .info-row { display: flex; gap: 12px; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px solid rgba(123,90,58,.12); }
-    .info-row:last-child { border-bottom: 0; padding-bottom: 0; }
-    .info-label { min-width: 72px; font-weight: 800; color: var(--accent-deep); }
-    .info-content { color: var(--text-soft); }
-    .price-box { display:flex; justify-content:space-between; padding:12px 16px; background:rgba(123,90,58,.06); border-radius:10px; }
-    .cta { background: linear-gradient(135deg, #533d2b, #7a5a3b); color: white; border-radius: 28px; padding: 34px; box-shadow: 0 24px 44px rgba(59, 41, 25, 0.18); }
-    .cta h2 { margin-top: 0; margin-bottom: 10px; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .cta p { margin-top: 0; color: rgba(255,255,255,.88); }
-    footer { padding: 32px 0 46px; color: var(--text-soft); font-size: .95rem; }
-    .footer-box { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid rgba(123,90,58,.14); }
-    .mobile-sticky { display: none; }
-    @media (max-width: 900px) { .hero-inner, .grid-2, .grid-3 { grid-template-columns: 1fr; } .hero-inner { min-height: auto; padding: 48px 0 34px; } .nav-links { display: none; } }
-    @media (max-width: 640px) { .section { padding: 58px 0; } .container { width: min(calc(100% - 24px), var(--max)); } .hero-actions { flex-direction: column; align-items: stretch; } .btn { width: 100%; } .mobile-sticky { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; position: sticky; bottom: 12px; z-index: 25; width: min(calc(100% - 24px), var(--max)); margin: 0 auto 14px; } .mobile-sticky a { padding: 14px 16px; border-radius: 999px; text-align: center; font-weight: 800; box-shadow: var(--shadow); } .mobile-sticky .call { background: var(--accent-deep); color: white; } .mobile-sticky .reserve { background: var(--accent); color: white; } }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      background:linear-gradient(180deg,var(--bg) 0%, #faf6ef 40%, var(--bg) 100%);
+      color:var(--text);
+      line-height:1.75;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(246,241,232,.9);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(111,75,47,.1);
+    }
+    .nav-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      font-weight:800;
+      letter-spacing:.08em;
+      white-space:nowrap;
+      font-size:18px;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .nav-links a:hover{color:var(--accent)}
+    .nav-cta{
+      background:var(--accent);
+      color:#fff !important;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    .hero{
+      padding:74px 0 42px;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--accent);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.03em;
+    }
+    h1{
+      margin:18px 0 18px;
+      font-size:clamp(38px,7vw,68px);
+      line-height:1.07;
+      letter-spacing:-.04em;
+      max-width:920px;
+    }
+    .lead{
+      max-width:760px;
+      margin:0 0 24px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:22px 0 28px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:var(--shadow);
+      font-weight:800;
+      transition:.15s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+
+    .hero-panels{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      margin-top:14px;
+    }
+    .panel,.card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .panel{
+      padding:24px;
+      background:linear-gradient(135deg, rgba(111,75,47,.08), rgba(255,255,255,.74));
+    }
+    .panel h2{
+      margin:0 0 10px;
+      font-size:24px;
+      line-height:1.3;
+    }
+    .panel p{margin:0;color:var(--muted)}
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:12px;
+      margin-top:28px;
+    }
+    .quick-item{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    .quick-item strong{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    section{padding:34px 0}
+    .section-head{margin-bottom:24px}
+    .section-title{
+      margin:0 0 10px;
+      font-size:clamp(28px,4vw,42px);
+      line-height:1.18;
+      letter-spacing:-.02em;
+    }
+    .section-desc{
+      margin:0;
+      max-width:760px;
+      color:var(--muted);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .card{
+      padding:24px;
+    }
+    .card h3{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.3;
+    }
+    .card p{margin:0;color:var(--muted)}
+
+    .tag{
+      display:inline-flex;
+      padding:7px 12px;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--accent);
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+
+    ul.clean{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    ul.clean li{
+      padding:11px 0;
+      border-bottom:1px dashed var(--line);
+    }
+    ul.clean li:last-child{border-bottom:none}
+
+    .notice{
+      margin-top:16px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px dashed var(--line);
+      background:rgba(111,75,47,.05);
+      color:var(--muted);
+    }
+
+    .step{
+      padding:14px 0;
+      border-bottom:1px dashed var(--line);
+    }
+    .step:last-child{border-bottom:none}
+    .step strong{display:block;margin-bottom:4px}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-item{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .contact-item strong{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .footer-cta{
+      background:linear-gradient(135deg, rgba(111,75,47,.12), rgba(142,104,66,.08));
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    footer{
+      padding:28px 0 96px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .mobile-bar{
+      display:none;
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:120;
+      background:rgba(255,253,248,.96);
+      backdrop-filter:blur(12px);
+      border-top:1px solid var(--line);
+      padding:10px 14px;
+    }
+    .mobile-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    @media (max-width:1024px){
+      .hero-panels,.split,.grid-3,.grid-2{grid-template-columns:1fr}
+      .quick-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:760px){
+      .nav-links{display:none}
+      .hero{padding-top:50px}
+      .lead{font-size:16px}
+      .quick-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+      .mobile-bar{display:block}
+      footer{padding-bottom:120px}
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"特富野餐廳",
+    "url":"https://tfuya-restaurant.github.io/tfuya-line/",
+    "telephone":"+886965622011",
+    "priceRange":"NT$500",
+    "acceptsReservations":true,
+    "servesCuisine":["鄒族料理","在地家常料理","原住民風味餐"],
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"嘉義縣阿里山鄉達邦村 8 鄰特富野 220 號附 1",
+      "addressRegion":"嘉義縣",
+      "addressCountry":"TW"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="#top" class="brand">特富野餐廳</a>
-      <nav class="nav-links">
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">特富野餐廳</a>
+      <div class="nav-links">
         <a href="#about">關於我們</a>
         <a href="#menu">料理介紹</a>
-        <a href="#noyoca">巨木秘境</a>
+        <a href="#forest">巨木秘境</a>
         <a href="#experience">部落體驗</a>
         <a href="#traffic">交通資訊</a>
-        <a href="#reserve">預約聯絡</a>
-      </nav>
-      <a class="btn btn-primary" href="#reserve">立即預約</a>
+        <a href="#reservation">預約聯絡</a>
+        <a class="nav-cta" href="#reservation">立即預約</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap" id="top">
+    <span class="eyebrow">阿里山特富野部落・預約制用餐體驗</span>
+    <h1>走進特富野，<br>吃一頓有土地味道的飯。</h1>
+    <p class="lead">
+      特富野餐廳位於阿里山特富野部落，提供鄒族風味餐、在地家常料理與預約制用餐體驗，也可搭配 noyoca 巨木群與部落體驗行程安排。
+    </p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#reservation">立即預約</a>
+      <a class="btn" href="#menu">料理內容</a>
+      <a class="btn" href="#traffic">交通方式</a>
+    </div>
+
+    <div class="hero-panels">
+      <div class="panel">
+        <h2>第一次來，先看最重要的就好。</h2>
+        <p>這裡不是大量出餐的觀光餐廳，而是依照預約慢慢準備的一桌飯。你可以單純來吃飯，也可以把用餐、走山、體驗排成半日或一日行程。</p>
+      </div>
+      <div class="panel">
+        <h2>適合這樣的你</h2>
+        <p>家庭出遊、朋友聚餐、阿里山旅程安排、部落深度體驗、小型團體與想慢慢吃一頓飯的人。</p>
+      </div>
+    </div>
+
+    <div class="quick-grid" aria-label="30秒看懂特富野餐廳">
+      <div class="quick-item"><strong>用餐方式</strong>預約制</div>
+      <div class="quick-item"><strong>套餐價格</strong>每人 500 元</div>
+      <div class="quick-item"><strong>供餐形式</strong>套餐制，無單點</div>
+      <div class="quick-item"><strong>可搭配</strong>巨木、導覽、手作</div>
+      <div class="quick-item"><strong>適合</strong>家庭、旅人、團體</div>
+      <div class="quick-item"><strong>預約方式</strong>電話／LINE</div>
     </div>
   </header>
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="eyebrow">阿里山特富野部落・預約制用餐體驗</div>
-          <h1>走進特富野，<br>吃一頓有土地味道的飯。</h1>
-          <p>特富野餐廳位於阿里山特富野部落，提供鄒族風味餐、在地家常料理與預約制用餐體驗，也可搭配 noyoca 巨木群與部落體驗行程安排。</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#reserve">立即預約</a>
-            <a class="btn btn-outline" href="#menu">料理內容</a>
-            <a class="btn btn-outline" href="#traffic">交通方式</a>
-          </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head center">
+        <h2 class="section-title">一趟上山，三種收穫</h2>
+        <p class="section-desc" style="margin:0 auto;">吃到部落風味、走進山林路線、把特富野的生活節奏真正感受一次。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>來吃飯</h3>
+          <p>想簡單吃一頓風味餐，適合家庭、旅人與朋友聚餐。預約後依人數安排套餐內容，慢慢吃、好好感受部落。</p>
         </div>
-        <div class="hero-card">
-          <h3>一趟上山，三種收穫</h3>
-          <p>吃到部落風味、走進山林路線、把特富野的生活節奏真正感受一次。</p>
+        <div class="card">
+          <h3>吃飯＋巨木秘境</h3>
+          <p>把吃飯變成一趟深度上山行程。適合第一次深入認識特富野，也想安排完整半日或一日旅程的人。</p>
+        </div>
+        <div class="card">
+          <h3>自由搭配體驗</h3>
+          <p>可搭配手烘咖啡、愛玉揉洗、部落巡禮、特富野步道與庫巴導覽，行程更完整。</p>
         </div>
       </div>
-    </section>
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">About</div>
-          <h2>把特富野的風味，做成一頓值得專程來吃的飯。</h2>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap split">
+      <div class="card">
+        <span class="tag">About</span>
+        <h2 class="section-title">把特富野的風味，做成一頓值得專程來吃的飯。</h2>
+        <p>特富野餐廳位在阿里山特富野部落。我們希望客人來到這裡，不只是坐下來吃一餐，而是透過料理、山林與部落日常，更認識這個地方真正的樣子。</p>
+        <p style="margin-top:14px;">餐點以在地食材、鄒族風味與家常做法為基礎，採預約制準備，讓每一份餐點都能依照人數與需求細細安排。</p>
+        <p style="margin-top:14px;">這裡吃到的不只是風味餐，還有特富野的生活感、山林感，和人情味。</p>
+      </div>
+      <div class="card">
+        <span class="tag">Why Here</span>
+        <h3>特富野餐廳的三個重點</h3>
+        <ul class="clean">
+          <li><strong>01｜部落風味</strong><br>以鄒族風味與在地料理為基礎，結合山林食材與家常做法，吃得到特富野的特色。</li>
+          <li><strong>02｜預約安排</strong><br>依照人數、食材與需求提前準備，用餐節奏更完整，也更適合團體與客製安排。</li>
+          <li><strong>03｜行程延伸</strong><br>可搭配巨木群、步道、咖啡與文化體驗，把吃飯變成一趟完整的上山行程。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap split">
+      <div class="card">
+        <span class="tag">Menu</span>
+        <h2 class="section-title">料理以預約內容與季節食材安排為主。</h2>
+        <h3 style="margin-top:0;">料理方向</h3>
+        <ul class="clean">
+          <li>鄒族烤肉風味餐</li>
+          <li>部落家常料理</li>
+          <li>團體預約合菜</li>
+          <li>客製風味餐食</li>
+          <li>搭配部落體驗之餐食安排</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">用餐說明</span>
+        <h3>先把最重要的看清楚</h3>
+        <ul class="clean">
+          <li><strong>本店為套餐制，每人 500 元</strong></li>
+          <li>含前菜、主菜、野菜、湯品、甜點與飲品</li>
+          <li><strong>無單點服務</strong></li>
+          <li>餐點會依當日食材、預約人數與需求調整</li>
+          <li>若有素食、團體聚餐或特殊飲食需求，歡迎提前聯繫</li>
+        </ul>
+
+        <div class="notice">
+          想看更完整菜單，可另外建立 <code>menu.html</code> 並從這裡連過去；如果你目前已經有 menu.html，這裡可以直接改成你的實際連結。
         </div>
-        <div class="grid-2">
-          <div class="card">
-            <p>特富野餐廳位在阿里山特富野部落。我們希望客人來到這裡，不只是坐下來吃一餐，而是透過料理、山林與部落日常，更認識這個地方真正的樣子。</p>
-            <p>餐點以在地食材、鄒族風味與家常做法為基礎，採預約制準備，讓每一份餐點都能依照人數與需求細細安排。</p>
-          </div>
-          <div>
-            <div class="quote">這裡吃到的不只是風味餐，還有特富野的生活感、山林感，和人情味。</div>
-          </div>
+
+        <div class="cta-row" style="margin-top:18px;">
+          <a class="btn" href="menu.html">查看完整菜單</a>
+          <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">詢問菜單內容</a>
         </div>
       </div>
-    </section>
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Why Here</div>
-          <h2>特富野餐廳的三個重點</h2>
+    </div>
+  </section>
+
+  <section id="reservation">
+    <div class="wrap split">
+      <div class="card">
+        <span class="tag">Reservation</span>
+        <h2 class="section-title">預約前先把重點看清楚。</h2>
+        <div class="step">
+          <strong>Step 1｜先聯絡我們</strong>
+          來電或加入 LINE，先告訴我們日期、人數與想安排的內容。
         </div>
-        <div class="grid-3">
-          <div class="card"><div class="feature-number">01</div><h3>部落風味</h3><p>以鄒族風味與在地料理為基礎，結合山林食材與家常做法，吃得到特富野的特色。</p></div>
-          <div class="card"><div class="feature-number">02</div><h3>預約安排</h3><p>依照人數、食材與需求提前準備，用餐節奏更完整，也更適合團體與客製安排。</p></div>
-          <div class="card"><div class="feature-number">03</div><h3>行程延伸</h3><p>可搭配巨木群、步道、咖啡與文化體驗，把吃飯變成一趟完整的上山行程。</p></div>
+        <div class="step">
+          <strong>Step 2｜說明需求</strong>
+          可一併告知是否想搭配巨木秘境、部落體驗、團體聚餐或特殊飲食需求。
         </div>
-      </div>
-    </section>
-    <section class="section" id="menu">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Menu</div>
-          <h2>料理以預約內容與季節食材安排為主。</h2>
+        <div class="step">
+          <strong>Step 3｜確認安排</strong>
+          我們確認時段與內容後，才算完成預約。
         </div>
-        <div class="grid-2">
-          <div class="card">
-            <h3>料理方向</h3>
-            <ul class="clean">
-              <li>鄒族烤肉風味餐</li>
-              <li>部落家常料理</li>
-              <li>團體預約合菜</li>
-              <li>客製風味餐食</li>
-              <li>搭配部落體驗之餐食安排</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>用餐說明</h3>
-            <p>本店為<strong>套餐制</strong>，每人 $500 含菜單上全部菜色（前菜、主菜、野菜、湯品、甜點與飲品），無單點服務。</p>
-            <p>餐點會依照當日食材、預約人數與需求調整。若有素食、團體聚餐或特殊飲食需求，歡迎提前聯繫。</p>
-            <div class="hero-actions" style="margin-top:16px; margin-bottom:0;">
-              <a class="btn btn-primary" href="menu.html" target="_blank">查看完整菜單</a>
-              <a class="btn btn-outline" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">詢問菜單內容</a>
-            </div>
-          </div>
+        <div class="notice">
+          本店為套餐制，每人 500 元，無單點服務；目前以預約制為主，建議提前聯繫安排。
         </div>
       </div>
-    </section>
-    <section class="section section-soft" id="reserve">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Reservation</div>
-          <h2>預約前先把重點看清楚。</h2>
+
+      <div class="card">
+        <span class="tag">預約聯絡</span>
+        <h3>直接找我們最快</h3>
+        <p>想預約用餐、詢問體驗、安排上山行程，都可以直接聯絡我們。</p>
+
+        <div class="contact-grid">
+          <a class="contact-item" href="tel:+886965622011">
+            <strong>電話</strong>
+            0965-622011
+          </a>
+          <div class="contact-item">
+            <strong>地址</strong>
+            嘉義縣阿里山鄉達邦村 8 鄰特富野 220 號附 1
+          </div>
+          <a class="contact-item" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">
+            <strong>LINE</strong>
+            @744uksmb
+          </a>
+          <a class="contact-item" href="https://maps.app.goo.gl/3m8u3d5Jz2p5QxVh9" target="_blank" rel="noopener">
+            <strong>Google 地圖</strong>
+            立即導航
+          </a>
         </div>
-        <div class="grid-2">
-          <div class="card">
-            <h3>預約提醒</h3>
-            <ul class="clean">
-              <li>本店為套餐制，每人 $500，無單點服務</li>
-              <li>目前以預約制為主</li>
-              <li>建議提前聯繫安排</li>
-              <li>可詢問團體用餐安排</li>
-              <li>可提前告知特殊飲食需求</li>
-              <li>若需搭配部落體驗，也可一併詢問</li>
-            </ul>
-          </div>
-          <div class="card contact-box">
-            <div class="info-row"><div class="info-label">電話</div><div class="info-content"><a href="tel:0965622011">0965-622011</a></div></div>
-            <div class="info-row"><div class="info-label">地址</div><div class="info-content">嘉義縣阿里山鄉達邦村 8 鄰特富野 220 號附 1</div></div>
-            <div class="info-row"><div class="info-label">LINE</div><div class="info-content">@744uksmb</div></div>
-            <div class="hero-actions" style="margin-top:8px; margin-bottom:0;">
-              <a class="btn btn-primary" href="tel:0965622011">電話預約</a>
-              <a class="btn btn-outline" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
-            </div>
-          </div>
+
+        <div class="cta-row" style="margin-top:18px;">
+          <a class="btn primary" href="tel:+886965622011">電話預約</a>
+          <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
         </div>
       </div>
-    </section>
-    <section class="section" id="noyoca">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Signature Experience</div>
-          <h2>🌳 noyoca 巨木群森林秘境</h2>
-          <p>一日深度山林文化體驗，帶你走進特富野更深處的自然與文化。</p>
-        </div>
-        <div class="grid-2">
-          <div class="card">
+    </div>
+  </section>
+
+  <section id="forest">
+    <div class="wrap">
+      <div class="card">
+        <span class="tag">Signature Experience</span>
+        <h2 class="section-title">noyoca 巨木群森林秘境</h2>
+        <p class="section-desc">
+          一日深度山林文化體驗，帶你走進特富野更深處的自然與文化。
+        </p>
+
+        <div class="grid-2" style="margin-top:22px;">
+          <div class="card" style="padding:20px;">
             <h3>行程內容</h3>
             <ul class="clean">
-              <li>行程說明</li>
               <li>森林接駁</li>
               <li>入山祈福</li>
               <li>獵寮導覽｜小點心＋咖啡</li>
@@ -219,111 +556,99 @@
               <li>庫巴文化導覽</li>
               <li>返程</li>
             </ul>
-            <div style="margin-top:16px; font-size:.92rem; color:var(--text-soft);">詳細時程請來電或 LINE 索取行程表。</div>
+            <div class="notice">詳細時程請來電或 LINE 索取行程表。</div>
           </div>
-          <div class="card">
+
+          <div class="card" style="padding:20px;">
             <h3>報價一覽</h3>
-            <div style="display:grid; gap:10px; margin-bottom:20px;">
-              <div class="price-box"><span style="color:var(--text-soft);">1 ~ 8 人</span><strong style="color:var(--accent-deep);">每人 2,500 元</strong></div>
-              <div class="price-box"><span style="color:var(--text-soft);">9 ~ 16 人</span><strong style="color:var(--accent-deep);">每人 2,400 元</strong></div>
-              <div class="price-box"><span style="color:var(--text-soft);">17 ~ 27 人</span><strong style="color:var(--accent-deep);">每人 1,900 元</strong></div>
-              <div class="price-box"><span style="color:var(--text-soft);">28 ~ 35 人（上限）</span><strong style="color:var(--accent-deep);">每人 1,700 元</strong></div>
-            </div>
-            <div style="font-size:.92rem; color:var(--text-soft); margin-bottom:16px;">每日 09:00 – 17:00</div>
-            <div class="hero-actions" style="margin-bottom:0;">
-              <a class="btn btn-primary" href="tel:0965622011">電話預約</a>
-              <a class="btn btn-outline" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE 詢問</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-soft" id="experience">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Experience</div>
-          <h2>部落體驗可自由搭配。</h2>
-          <p>每項體驗每人 400 元，2 人以上即可報名，可與用餐行程一併安排。</p>
-        </div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="feature-number">🖐️</div>
-            <h3>手作體驗</h3>
             <ul class="clean">
-              <li><strong>手烘咖啡體驗</strong>｜約 1 小時</li>
-              <li><strong>愛玉揉洗體驗</strong>｜約 1 小時</li>
+              <li>1 ~ 8 人　每人 2,500 元</li>
+              <li>9 ~ 16 人　每人 2,400 元</li>
+              <li>17 ~ 27 人　每人 1,900 元</li>
+              <li>28 ~ 35 人（上限）每人 1,700 元</li>
+              <li>每日 09:00 – 17:00</li>
             </ul>
-          </div>
-          <div class="card">
-            <div class="feature-number">🚶</div>
-            <h3>步行導覽</h3>
-            <ul class="clean">
-              <li><strong>部落巡禮</strong>｜約 1.5 ~ 2 小時</li>
-              <li><strong>特富野步道</strong>｜約 1.5 ~ 2 小時</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="feature-number">📍</div>
-            <h3>定點導覽</h3>
-            <ul class="clean">
-              <li><strong>庫巴導覽</strong>｜約 1 小時</li>
-            </ul>
-            <div style="margin-top:20px; padding:14px; background:rgba(123,90,58,.06); border-radius:12px; font-size:.92rem; color:var(--text-soft);">
-              每人 <strong style="color:var(--accent-deep); font-size:1.1rem;">400 元</strong>｜2 人以上即可報名
+            <div class="cta-row" style="margin-top:18px;">
+              <a class="btn primary" href="tel:+886965622011">電話預約</a>
+              <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE 詢問</a>
             </div>
           </div>
         </div>
-        <div style="margin-top:24px; text-align:center;">
-          <a class="btn btn-primary" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">詢問體驗安排</a>
-        </div>
       </div>
-    </section>
-    <section class="section" id="traffic">
-      <div class="container">
-        <div class="section-title">
-          <div class="tag">Traffic</div>
-          <h2>交通方式</h2>
-        </div>
-        <div class="grid-2">
-          <div class="card">
-            <h3>開車前往</h3>
-            <p>建議直接使用 Google 地圖搜尋「特富野餐廳」導航前來。山區道路較蜿蜒，建議白天上山，並預留較充裕的車程時間。</p>
-            <a class="btn btn-outline" href="https://maps.app.goo.gl/SXDa2GgniWKABevh7" target="_blank" rel="noopener" style="margin-top:12px;">Google 地圖導航</a>
-          </div>
-          <div class="card">
-            <h3>大眾運輸與提醒</h3>
-            <ul class="clean">
-              <li>可先抵達嘉義，再轉乘前往阿里山鄉達邦／特富野方向的交通工具</li>
-              <li>山區班次較少，出發前建議先確認時刻</li>
-              <li>雨天、濃霧與夜間行車請特別留意安全</li>
-              <li>第一次前來也可先來電詢問路線</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="cta">
-          <h2>想預約用餐、詢問體驗、安排上山行程，都歡迎直接聯絡我們。</h2>
-          <p>每一份餐點都是依照預約安排慢慢準備，謝謝你提前留時間給我們。</p>
-          <div class="hero-actions" style="margin-bottom:0;">
-            <a class="btn btn-primary" href="tel:0965622011">立即來電</a>
-            <a class="btn btn-outline" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container footer-box">
-      <div><strong>特富野餐廳</strong><br>阿里山特富野部落的風味餐與在地餐桌體驗</div>
-      <div>嘉義縣阿里山鄉達邦村 8 鄰特富野 220 號附 1<br>預約專線：<a href="tel:0965622011">0965-622011</a></div>
     </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap split">
+      <div class="card">
+        <span class="tag">Experience</span>
+        <h2 class="section-title">部落體驗可自由搭配。</h2>
+        <p>每項體驗每人 400 元，2 人以上即可報名，可與用餐行程一併安排。</p>
+      </div>
+      <div class="card">
+        <h3>體驗內容</h3>
+        <ul class="clean">
+          <li><strong>手作體驗</strong><br>手烘咖啡體驗｜約 1 小時<br>愛玉揉洗體驗｜約 1 小時</li>
+          <li><strong>步行導覽</strong><br>部落巡禮｜約 1.5 ~ 2 小時<br>特富野步道｜約 1.5 ~ 2 小時</li>
+          <li><strong>定點導覽</strong><br>庫巴導覽｜約 1 小時</li>
+        </ul>
+        <div class="notice">每人 400 元｜2 人以上即可報名</div>
+        <div class="cta-row" style="margin-top:18px;">
+          <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">詢問體驗安排</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="traffic">
+    <div class="wrap split">
+      <div class="card">
+        <span class="tag">Traffic</span>
+        <h2 class="section-title">交通方式</h2>
+        <h3 style="margin-top:0;">開車前往</h3>
+        <p>建議直接使用 Google 地圖搜尋「特富野餐廳」導航前來。山區道路較蜿蜒，建議白天上山，並預留較充裕的車程時間。</p>
+        <div class="cta-row" style="margin-top:18px;">
+          <a class="btn" href="https://maps.app.goo.gl/3m8u3d5Jz2p5QxVh9" target="_blank" rel="noopener">Google 地圖導航</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>大眾運輸與提醒</h3>
+        <ul class="clean">
+          <li>可先抵達嘉義，再轉乘前往阿里山鄉達邦／特富野方向的交通工具</li>
+          <li>山區班次較少，出發前建議先確認時刻</li>
+          <li>雨天、濃霧與夜間行車請特別留意安全</li>
+          <li>第一次前來也可先來電詢問路線</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap footer-cta">
+      <h2 class="section-title">想預約用餐、詢問體驗、安排上山行程，都歡迎直接聯絡我們。</h2>
+      <p class="section-desc">
+        每一份餐點都是依照預約安排慢慢準備，謝謝你提前留時間給我們。
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+886965622011">立即來電</a>
+        <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <strong style="color:var(--text)">特富野餐廳</strong><br>
+    阿里山特富野部落的風味餐與在地餐桌體驗<br>
+    嘉義縣阿里山鄉達邦村 8 鄰特富野 220 號附 1<br>
+    預約專線：0965-622011
   </footer>
-  <div class="mobile-sticky">
-    <a class="call" href="tel:0965622011">立即來電</a>
-    <a class="reserve" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
+
+  <div class="mobile-bar" aria-label="手機快速聯絡">
+    <div class="mobile-inner">
+      <a class="btn primary" href="tel:+886965622011">立即來電</a>
+      <a class="btn" href="https://line.me/R/ti/p/@744uksmb" target="_blank" rel="noopener">加入 LINE</a>
+    </div>
   </div>
 </body>
 </html>
